@@ -2,6 +2,8 @@
 
 Dilo Game Academy - Angry Bird
 
-## Dilo Academy 0/7 ()
+## Dilo Academy 7/14 (Step: Scripting Game Controller - Quiz)
 
 ### Bugs:
+
+    ~~ Nothing Known So Far ~~
