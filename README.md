@@ -2,8 +2,8 @@
 
 Dilo Game Academy - Angry Bird
 
-## Dilo Academy 7/14 (Step: Scripting Game Controller - Quiz)
+## Dilo Academy 10/14 (Step: Setup Obstacle And Enemy)
 
 ### Bugs:
 
-    ~~ Nothing Known So Far ~~
+[] Event Action Unity Action still bugged, error Syntax
