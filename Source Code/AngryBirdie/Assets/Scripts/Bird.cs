@@ -67,11 +67,15 @@ public class Bird : MonoBehaviour
     {
         if (_state == BirdState.Thrown || _state == BirdState.HitSomething) 
         {
-            //OnBirdDestroyed();
+            onBirdDestroyed();
         }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
         _state = BirdState.HitSomething;
+    }
+    public virtual void OnTap()
+    {
+        //Do nothing
     }
 }

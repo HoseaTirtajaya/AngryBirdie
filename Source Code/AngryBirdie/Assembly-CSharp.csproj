@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\SlingShooter.cs" />
     <Compile Include="Assets\Scripts\TrailController.cs" />
+    <Compile Include="Assets\Scripts\YellowBird.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Scripts/Script/Tes(Unty)/AngryBirds/Source Code/AngryBirdie/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
