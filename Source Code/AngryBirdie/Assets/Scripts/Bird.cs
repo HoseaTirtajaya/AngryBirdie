@@ -76,6 +76,7 @@ public class Bird : MonoBehaviour
     }
     public virtual void OnTap()
     {
+        //Debug.Log("Clicked!");
         //Do nothing
     }
 }

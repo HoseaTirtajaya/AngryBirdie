@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -34,7 +35,11 @@ public class GameController : MonoBehaviour
 
         if (_isGameEnded)
         {
-            return;
+            SceneManager.LoadScene("Lvl2");
+            if(SceneManager.sceneCount == 0)
+            {
+                Debug.Log("You've Won");
+            }
         }
 
         Birds.RemoveAt(0);

@@ -193,11 +193,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38386007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.88, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187416210}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &38386009
 CircleCollider2D:
@@ -328,11 +328,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196780413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.93, y: -2.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187416210}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &196780415
 SpriteRenderer:
@@ -435,7 +435,7 @@ MonoBehaviour:
   Parent: {fileID: 1187416209}
   RigidBody: {fileID: 196780416}
   Collider: {fileID: 196780417}
-  _boostForce: 1000000
+  _boostForce: 100
   _hasBoost: 0
 --- !u!1 &218379825 stripped
 GameObject:
@@ -537,8 +537,8 @@ MonoBehaviour:
   SlingShooter: {fileID: 957612923}
   trail: {fileID: 15171638}
   Birds:
-  - {fileID: 196780418}
   - {fileID: 38386012}
+  - {fileID: 196780418}
   - {fileID: 1175810182}
   Enemies:
   - {fileID: 1448170342}
@@ -1044,9 +1044,11 @@ GameObject:
   - component: {fileID: 1175810185}
   - component: {fileID: 1175810184}
   - component: {fileID: 1175810183}
+  - component: {fileID: 1175810187}
   - component: {fileID: 1175810182}
+  - component: {fileID: 1175810188}
   m_Layer: 0
-  m_Name: RedBird (2)
+  m_Name: BombBird
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,12 +1063,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1175810181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717c3359995b45b4784bc3a77794cdce, type: 3}
+  m_Script: {fileID: 11500000, guid: 426d6401866288a4daf922997eb5cfe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Parent: {fileID: 1187416209}
   RigidBody: {fileID: 1175810184}
   Collider: {fileID: 1175810183}
+  bombRad: {fileID: 1175810187}
 --- !u!58 &1175810183
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1142,7 +1145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8d65fab5aa828d7439359b962c57d921, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d20e3fb65723114693388b7b8c277c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1161,12 +1164,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175810181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.87, y: -2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187416210}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1175810187
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175810181}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.1803603, y: 0.37672853}
+  serializedVersion: 2
+  m_Radius: 1.598381
+--- !u!114 &1175810188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175810181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113c2b8ef788bc64b89bd27f79c5475a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1187416209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,8 +1225,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 196780414}
   - {fileID: 38386008}
+  - {fileID: 196780414}
   - {fileID: 1175810186}
   m_Father: {fileID: 0}
   m_RootOrder: 2

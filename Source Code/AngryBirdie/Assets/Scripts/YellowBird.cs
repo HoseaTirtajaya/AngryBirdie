@@ -5,7 +5,7 @@ using UnityEngine;
 public class YellowBird : Bird
 {
     [SerializeField]
-    public float _boostForce = 100;
+    public float _boostForce = 1000000;
     public bool _hasBoost = false;
 
     public void Boost()
